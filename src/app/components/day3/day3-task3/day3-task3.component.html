@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>CRUD with Fake API</h2>
+
+  <button (click)="add()">Add Item</button>
+  <button (click)="load()">Reload</button>
+
+  <div *ngIf="loading$ | async" class="spinner">Loading…</div>
+
+  <ul>
+    <li *ngFor="let it of items">
+      {{ it.name }}
+      <button (click)="remove(it.id)">×</button>
+    </li>
+  </ul>
+</div>

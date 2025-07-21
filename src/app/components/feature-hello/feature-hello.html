@@ -1,0 +1,9 @@
+<h1>{{ title }}</h1>
+<img [src]="imageUrl" alt="logo" width="150"/>
+
+<p>{{ count }}</p>
+<button (click)="incrementCount()">Increment</button>
+
+<input type="text" [(ngModel)]="username" placeholder="Enter your username" />
+
+<p>Hello, {{ username }}</p>
