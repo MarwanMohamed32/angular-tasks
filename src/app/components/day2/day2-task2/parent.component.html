@@ -1,0 +1,28 @@
+<div style="margin: 2rem">
+  <h1>Angular Lifecycle Hooks Demo</h1>
+
+  <!-- 1. Input field for the message -->
+  <label>
+    Message to child:
+    <input [(ngModel)]="parentMessage" placeholder="Type something..." />
+  </label>
+
+  <!-- 2. Toggle button -->
+  <button (click)="showChild = !showChild" style="margin-left: 1rem">
+    {{ showChild ? "Hide" : "Show" }} Child
+  </button>
+
+  <hr />
+
+  <!-- 3. Conditionally render child -->
+  <app-child2
+    *ngIf="showChild"
+    [message]="parentMessage"
+    (lifecycleLog)="onChildLog($event)"
+  ></app-child2>
+
+  <h2>Parent sees child logs:</h2>
+  <ul>
+    <li *ngFor="let entry of logs">{{ entry }}</li>
+  </ul>
+</div>

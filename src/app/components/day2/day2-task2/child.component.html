@@ -1,0 +1,9 @@
+<div style="border: 1px solid #ccc; padding: 1rem; margin-top: 1rem">
+  <h3>Child Component</h3>
+  <p><strong>Current message:</strong> {{ message }}</p>
+
+  <h4>Lifecycle logs:</h4>
+  <ul>
+    <li *ngFor="let entry of logs">{{ entry }}</li>
+  </ul>
+</div>
