@@ -1,0 +1,6 @@
+<h3>Child Component</h3>
+<ng-container *ngIf="user">
+  <p>Received user: {{ user.name }} (Age: {{ user.age }})</p>
+  <button (click)="modifyUser()">Update User</button>
+</ng-container>
+<button (click)="modifyUser()">Update User</button>

@@ -1,0 +1,10 @@
+<app-child [user]="user" (updatedUser)="onUserUpdated($event)"></app-child>
+
+<div>
+  <strong>Original User:</strong>
+  {{ user.name }} (Age: {{ user.age }})
+</div>
+<div *ngIf="updatedUser">
+  <strong>Updated User:</strong>
+  {{ updatedUser?.name }} (Age: {{ updatedUser?.age }})
+</div>
